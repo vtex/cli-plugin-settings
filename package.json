@@ -1,7 +1,11 @@
 {
   "name": "@vtex/cli-plugin-settings",
   "description": "vtex plugin settings",
+<<<<<<< HEAD
   "version": "0.1.0",
+=======
+  "version": "0.0.0",
+>>>>>>> 5b5569d (Documentation)
   "bugs": "https://github.com/vtex/cli-plugin-settings/issues",
   "dependencies": {
     "@oclif/command": "^1",
@@ -50,7 +54,11 @@
     ],
     "topics": {
       "settings": {
+<<<<<<< HEAD
         "description": "Prints, enables, or disables an app setting. Run 'vtex settings' to see all 3 subcommands"
+=======
+        "description": "Settings commands. Run 'vtex settings' to see all subcommands"
+>>>>>>> 5b5569d (Documentation)
       }
     }
   },
