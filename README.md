@@ -25,11 +25,11 @@ For more information, read [Ocliff Docs](https://oclif.io/docs/introduction).
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @vtex/cli-plugin-template
+$ npm install -g @vtex/cli-plugin-settings
 $ vtex COMMAND
 running command...
 $ vtex (-v|--version|version)
-@vtex/cli-plugin-template/0.0.0 linux-x64 node-v12.18.4
+@vtex/cli-plugin-settings/0.0.0 linux-x64 node-v12.20.0
 $ vtex --help [COMMAND]
 USAGE
   $ vtex COMMAND
@@ -38,27 +38,67 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`vtex hello [FILE]`](#vtex-hello-file)
+* [`vtex settings:get APPNAME [FIELD]`](#vtex-settingsget-appname-field)
+* [`vtex settings:set APPNAME FIELD VALUE`](#vtex-settingsset-appname-field-value)
+* [`vtex settings:unset APPNAME FIELD`](#vtex-settingsunset-appname-field)
 
-## `vtex hello [FILE]`
+## `vtex settings:get APPNAME [FIELD]`
 
-describe the command here
+Get app settings
 
 ```
 USAGE
-  $ vtex hello [FILE]
+  $ vtex settings:get APPNAME [FIELD]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-  -v, --verbose    Show debug level logs
-  --trace          Ensure all requests to VTEX IO are traced
+  -h, --help     show CLI help
+  -v, --verbose  Show debug level logs
+  --trace        Ensure all requests to VTEX IO are traced
+
+ALIASES
+  $ vtex settings
 
 EXAMPLE
-  $ oclif-example hello
-  hello world from ./src/hello.ts!
+  vtex settings get vtex.service-example
 ```
 
-_See code: [build/commands/hello.ts](https://github.com/vtex/cli-plugin-template/blob/v0.0.0/build/commands/hello.ts)_
+_See code: [build/commands/settings/get.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.0/build/commands/settings/get.ts)_
+
+## `vtex settings:set APPNAME FIELD VALUE`
+
+Set app settings
+
+```
+USAGE
+  $ vtex settings:set APPNAME FIELD VALUE
+
+OPTIONS
+  -h, --help     show CLI help
+  -v, --verbose  Show debug level logs
+  --trace        Ensure all requests to VTEX IO are traced
+
+EXAMPLE
+  vtex settings set vtex.service-example fieldName fieldValue
+```
+
+_See code: [build/commands/settings/set.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.0/build/commands/settings/set.ts)_
+
+## `vtex settings:unset APPNAME FIELD`
+
+Unset app settings
+
+```
+USAGE
+  $ vtex settings:unset APPNAME FIELD
+
+OPTIONS
+  -h, --help     show CLI help
+  -v, --verbose  Show debug level logs
+  --trace        Ensure all requests to VTEX IO are traced
+
+EXAMPLE
+  vtex settings unset vtex.service-example fieldName
+```
+
+_See code: [build/commands/settings/unset.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.0/build/commands/settings/unset.ts)_
 <!-- commandsstop -->
