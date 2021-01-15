@@ -29,7 +29,7 @@ $ npm install -g @vtex/cli-plugin-settings
 $ vtex COMMAND
 running command...
 $ vtex (-v|--version|version)
-@vtex/cli-plugin-settings/0.0.0 linux-x64 node-v12.20.0
+@vtex/cli-plugin-settings/0.0.1 linux-x64 node-v12.20.1
 $ vtex --help [COMMAND]
 USAGE
   $ vtex COMMAND
@@ -62,7 +62,7 @@ EXAMPLE
   vtex settings get vtex.service-example
 ```
 
-_See code: [build/commands/settings/get.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.0/build/commands/settings/get.ts)_
+_See code: [build/commands/settings/get.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.1/build/commands/settings/get.ts)_
 
 ## `vtex settings:set APPNAME FIELD VALUE`
 
@@ -81,7 +81,7 @@ EXAMPLE
   vtex settings set vtex.service-example fieldName fieldValue
 ```
 
-_See code: [build/commands/settings/set.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.0/build/commands/settings/set.ts)_
+_See code: [build/commands/settings/set.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.1/build/commands/settings/set.ts)_
 
 ## `vtex settings:unset APPNAME FIELD`
 
@@ -100,5 +100,5 @@ EXAMPLE
   vtex settings unset vtex.service-example fieldName
 ```
 
-_See code: [build/commands/settings/unset.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.0/build/commands/settings/unset.ts)_
+_See code: [build/commands/settings/unset.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.1/build/commands/settings/unset.ts)_
 <!-- commandsstop -->
