@@ -50,7 +50,7 @@
     ],
     "topics": {
       "settings": {
-        "description": "Settings commands. Run 'vtex settings' to see all subcommands"
+        "description": "Prints, enables, or disables an app setting. Run 'vtex settings' to see all 3 subcommands"
       }
     }
   },

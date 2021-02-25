@@ -1,19 +1,22 @@
-import { CustomCommand } from 'vtex'
+import { CustomCommand, ColorifyConstants } from 'vtex'
 import appsSettingsSet from '../../modules/set'
 
 export default class SettingsSet extends CustomCommand {
-  static description = 'Set app settings'
+  static description = 'Sets value to an app setting.'
 
-  static examples = ['vtex settings set vtex.service-example fieldName fieldValue']
+  static examples = [
+    `${ColorifyConstants.COMMAND_OR_VTEX_REF('vtex settings set')} vtex.service-example fieldName fieldValue`,
+    `${ColorifyConstants.COMMAND_OR_VTEX_REF('vtex settings set')} vtex.store enableCriticalCSS true`,
+  ]
 
   static flags = {
     ...CustomCommand.globalFlags,
   }
 
   static args = [
-    { name: 'appName', required: true },
-    { name: 'field', required: true },
-    { name: 'value', required: true },
+    { name: 'appName', required: true, description: `Name of the app.` },
+    { name: 'field', required: true, description: `Name of the setting.` },
+    { name: 'value', required: true, description: `Value of the setting.` },
   ]
 
   async run() {
