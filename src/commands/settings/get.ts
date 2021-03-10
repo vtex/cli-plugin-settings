@@ -1,18 +1,21 @@
-import { CustomCommand } from 'vtex'
+import { CustomCommand, ColorifyConstants } from 'vtex'
 import appsSettingsGet from '../../modules/index'
 
 export default class SettingsGet extends CustomCommand {
-  static description = 'Get app settings'
+  static description = 'Prints the settings of an app.'
 
   static aliases = ['settings']
 
-  static examples = ['vtex settings get vtex.service-example']
+  static examples = [`${ColorifyConstants.COMMAND_OR_VTEX_REF('vtex settings get')} vtex.service-example`]
 
   static flags = {
     ...CustomCommand.globalFlags,
   }
 
-  static args = [{ name: 'appName', required: true }, { name: 'field' }]
+  static args = [
+    { name: 'appName', required: true, description: 'Name of the app to check the available settings.' },
+    { name: 'field', description: 'Name of the setting.' },
+  ]
 
   async run() {
     const {
