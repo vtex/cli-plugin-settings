@@ -29,7 +29,7 @@ $ npm install -g @vtex/cli-plugin-settings
 $ vtex COMMAND
 running command...
 $ vtex (-v|--version|version)
-@vtex/cli-plugin-settings/0.1.0 linux-x64 node-v12.21.0
+@vtex/cli-plugin-settings/0.0.0 linux-x64 node-v12.21.0
 $ vtex --help [COMMAND]
 USAGE
   $ vtex COMMAND
@@ -44,15 +44,11 @@ USAGE
 
 ## `vtex settings:get APPNAME [FIELD]`
 
-Prints the settings of an app.
+Get app settings
 
 ```
 USAGE
   $ vtex settings:get APPNAME [FIELD]
-
-ARGUMENTS
-  APPNAME  Name of the app to check the available settings.
-  FIELD    Name of the setting.
 
 OPTIONS
   -h, --help     show CLI help
@@ -66,44 +62,34 @@ EXAMPLE
   vtex settings get vtex.service-example
 ```
 
-_See code: [build/commands/settings/get.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.1.0/build/commands/settings/get.ts)_
+_See code: [build/commands/settings/get.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.0/build/commands/settings/get.ts)_
 
 ## `vtex settings:set APPNAME FIELD VALUE`
 
-Sets value to an app setting.
+Set app settings
 
 ```
 USAGE
   $ vtex settings:set APPNAME FIELD VALUE
-
-ARGUMENTS
-  APPNAME  Name of the app.
-  FIELD    Name of the setting.
-  VALUE    Value of the setting.
 
 OPTIONS
   -h, --help     show CLI help
   -v, --verbose  Show debug level logs
   --trace        Ensure all requests to VTEX IO are traced
 
-EXAMPLES
+EXAMPLE
   vtex settings set vtex.service-example fieldName fieldValue
-  vtex settings set vtex.store enableCriticalCSS true
 ```
 
-_See code: [build/commands/settings/set.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.1.0/build/commands/settings/set.ts)_
+_See code: [build/commands/settings/set.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.0/build/commands/settings/set.ts)_
 
 ## `vtex settings:unset APPNAME FIELD`
 
-Disables the specified app setting.
+Unset app settings
 
 ```
 USAGE
   $ vtex settings:unset APPNAME FIELD
-
-ARGUMENTS
-  APPNAME  Name of the app.
-  FIELD    Name of the setting.
 
 OPTIONS
   -h, --help     show CLI help
@@ -114,5 +100,5 @@ EXAMPLE
   vtex settings unset vtex.service-example fieldName
 ```
 
-_See code: [build/commands/settings/unset.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.1.0/build/commands/settings/unset.ts)_
+_See code: [build/commands/settings/unset.ts](https://github.com/vtex/cli-plugin-settings/blob/v0.0.0/build/commands/settings/unset.ts)_
 <!-- commandsstop -->
