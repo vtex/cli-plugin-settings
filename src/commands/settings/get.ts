@@ -1,5 +1,5 @@
 import { CustomCommand, ColorifyConstants } from 'vtex'
-import appsSettingsGet from '../../modules/index'
+import appsSettingsGet from '../../modules/get'
 
 export default class SettingsGet extends CustomCommand {
   static description = 'Prints the settings of an app.'
