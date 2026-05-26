@@ -1,5 +1,5 @@
 - name: cli-plugin-settings
-  referenceId: PLACEHOLDER
+  referenceId: D60R2GWI
   build:
     provider: dkcicd
     pipelines:
